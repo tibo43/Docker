@@ -7,7 +7,8 @@ Files to build and run a Docker container
 To host a secure webapp 
 
 ## How?
-Use and alteration a Dockefile and files of Fernando Mayo <fernando@tutum.co>, Feng Honglin <hfeng@tutum.co> <br />
+Use and alteration a Dockefile and files of <br />
+Fernando Mayo <fernando@tutum.co> and Feng Honglin <hfeng@tutum.co> <br />
 Layer base : Ubunu 14.0.4 LTS <br />
 Pacakge install : Apache2, PHP5, MySQL
 
