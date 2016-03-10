@@ -1,0 +1,4 @@
+<VirtualHost *:80>
+    ServerName JavHackard
+    Redirect / https://172.17.0.2
+</VirtualHost>
