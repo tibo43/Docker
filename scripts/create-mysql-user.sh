@@ -18,8 +18,9 @@ mysql -uroot -e "CREATE USER 'admin'@'%' IDENTIFIED BY '$PASS'"
 mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION"
 
 # You can create a /mysql-setup.sh file to intialized the DB
-if [ -f /mysql-setup.sh ] ; then
-   ./mysql-setup.sh
+if [ -f /scripts/setup-mysql.sh ] ; then
+   echo "=> Initialization of the DB"
+   ./scripts/setup-mysql.sh
 fi
 
 echo "=> Done!"
