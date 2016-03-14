@@ -10,27 +10,33 @@ To host a secure webapp
 Use and alteration a Dockefile and files of <br />
 Fernando Mayo <fernando@tutum.co> and Feng Honglin <hfeng@tutum.co> <br />
 Layer base : Ubunu 14.0.4 LTS <br />
-Pacakge install : Apache2, PHP5, MySQL, java
+Layer added : Apache2, PHP5, MySQL, java
 
 ## How to?
-Tar webapp folder with the name JavHackard.tar <br />
-Move the tar with the others files of build Docker
+Tar webapp folder with the name JavHackard.tar into the Docker <br />
 
-Build
+To build:
 ```Shell
 docker build -t name_of_image path_of_dockerfile
 #example
 # docker build -t serverweb .
 ```
 
-Run
+To run:
 ```Shell
-docker run -i -t name_of_image
+docker run -ti name_of_image
 #example
-# docker run -i -t serverweb
+# docker run -ti serverweb
 ```
 
-To manage the DB on a running container, the admin had to use the command line <br \>
+To access into the running container:
+```Shell
+docker ps
+#copy the id_container of our container
+docker exec -ti id_container bash
+```
+
+To manage the DB on a running container, the admin had to use the command line:
 ```Shell
 mysql -uadmin -p<PASSWORD> -h<HOST>
 #example
@@ -39,7 +45,7 @@ mysql -uadmin -p<PASSWORD> -h<HOST>
 
 ## Future?
 
-Install java and test java command.
+Create script to build image, to launch container, to access into container and to manage DB
 
 ## Important
 
