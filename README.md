@@ -45,7 +45,8 @@ mysql -uadmin -p<PASSWORD> -h<HOST>
 
 ## Future?
 
-Check the IP address redirection in /etc/apache2/sites-available/000-default.conf
+In dockerfiles, echo in apache2.conf ServerTokens Prod
+Check open ports 111, 22 (Iptables)
 Create script to build image, to launch container, to access into container and to manage DB
 
 ## Important

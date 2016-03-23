@@ -12,9 +12,9 @@
 	SSLCipherSuite ECDHE-RSA-AES128-SHA256:AES128-GCM-SHA256:HIGH:!MD5:!aNULL:!EDH:!RC4
 	SSLCompression off
 
-	#ServerSignature Off
-	#ServerTokens Prod
-	
+	ServerSignature Off
+	#ServerTokens Prod	
+
 	<Directory /var/www/html>
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride All
@@ -23,8 +23,9 @@
 	<Directory /var/www/html/files>
                 Options None
 		AllowOverride None
-		Order Deny,Allow
-		Deny from all
+		<RequireAny>
+			Require ip 192.168.43.240
+		</RequireAny>
         </Directory>
 	
 
