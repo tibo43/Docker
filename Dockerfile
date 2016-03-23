@@ -66,6 +66,7 @@ VOLUME  ["/etc/mysql", "/var/lib/mysql" ]
 
 # Define the JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
+ENV APACHE_RUN_USER www-data
 
 # Define ports that docker listen
 EXPOSE 443 3306
