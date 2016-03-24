@@ -7,7 +7,10 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
   apt-get -y install supervisor apache2 libapache2-mod-php5 mysql-server php5-mysql php5 openjdk-7-jdk && \
   rm -rf /var/lib/apt/lists/*  &&\
-  echo "ServerName localhost" >> /etc/apache2/apache2.conf
+  echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
+  echo "ServerTokens Prod" >> /etc/apache2/apache2.conf && \
+  echo "ServerSignature Off" >> /etc/apache2/apache2.conf
+	
 
 # Create folder, add scripts and change rights
 RUN mkdir -p /scripts

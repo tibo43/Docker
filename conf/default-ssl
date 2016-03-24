@@ -12,7 +12,7 @@
 	SSLCipherSuite ECDHE-RSA-AES128-SHA256:AES128-GCM-SHA256:HIGH:!MD5:!aNULL:!EDH:!RC4
 	SSLCompression off
 
-	ServerSignature Off
+	#ServerSignature Off
 	#ServerTokens Prod	
 
 	<Directory /var/www/html>
