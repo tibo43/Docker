@@ -32,7 +32,6 @@ ADD scripts/run.sh /scripts/run.sh
 ## Change rights of files into scripts' folder
 RUN chmod 755 /scripts/*.sh
 
-
 # Add files' configuration
 
 ## Add my own conf of mysql
@@ -60,7 +59,7 @@ RUN chmod o-rw /etc/apache2/ssl/server.key
 
 
 # Configure /app folder with the app and link it within /var/www/html and change owner of folder and file
-ADD JavHackard.tar /app/
+ADD JavHackard/* /app/
 RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html && chown -R www-data /app && chown  www-data /app/files/*
 
 
