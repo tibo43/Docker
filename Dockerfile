@@ -59,14 +59,14 @@ RUN chmod o-rw /etc/apache2/ssl/server.key
 
 
 # Configure /app folder with the app and link it within /var/www/html and change owner of folder and file
-ADD JavHackard/* /app/
-RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html && chown -R www-data /app && chown  www-data /app/files/*
+ADD JavHackard/ /app/
+RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html && chown -R www-data /app && chown www-data /app/files/*
 
 
 # Add volumes for MySQL 
 VOLUME  ["/etc/mysql", "/var/lib/mysql" ]
 
-# Define the JAVA_HOME variable
+# Define ENVIRONMENT
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
 ENV APACHE_RUN_USER www-data
 

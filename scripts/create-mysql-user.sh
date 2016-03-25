@@ -11,7 +11,7 @@ while [[ RET -ne 0 ]]; do
     RET=$?
 done
 
-PASS=azerty
+PASS=$(cat /app/files/khdfgeaqejalh/bdd)
 echo "=> Creating MySQL admin user with $PASS password"
 
 mysql -uroot -e "CREATE USER 'admin'@'%' IDENTIFIED BY '$PASS'"
@@ -24,14 +24,5 @@ if [ -f /scripts/setup-mysql.sh ] ; then
 fi
 
 echo "=> Done!"
-
-echo "========================================================================"
-echo "You can now connect to this MySQL Server using:"
-echo ""
-echo "    mysql -uadmin -p$PASS -h<host> -P<port>"
-echo ""
-echo "Please remember to change the above password as soon as possible!"
-echo "MySQL user 'root' has no password but only allows local connections"
-echo "========================================================================"
 
 mysqladmin -uroot shutdown
