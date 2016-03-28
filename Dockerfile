@@ -1,6 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER Fernando Mayo <fernando@tutum.co>, Feng Honglin <hfeng@tutum.co>
-# Dockerfile modified by Thibaut Fabre <fabre.thibaut@gmail.com>
+MAINTAINER Thibaut Fabre <fabre.thibaut@gmail.com>
 
 # Install packages
 ENV DEBIAN_FRONTEND noninteractive
@@ -59,7 +58,7 @@ RUN chmod o-rw /etc/apache2/ssl/server.key
 
 
 # Configure /app folder with the app and link it within /var/www/html and change owner of folder and file
-ADD JavHackard/ /app/
+ADD WebApp/ /app/
 RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html && chown -R www-data /app && chown www-data /app/files/*
 
 

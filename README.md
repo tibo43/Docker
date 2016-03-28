@@ -12,43 +12,14 @@ Fernando Mayo <fernando@tutum.co> and Feng Honglin <hfeng@tutum.co> <br />
 Layer base : Ubunu 14.0.4 LTS <br />
 Layer added : Apache2, PHP5, MySQL, java
 
-## How to?
-Tar webapp folder with the name JavHackard.tar into the Docker <br />
+## How does it work?
 
-To build:
-```Shell
-docker build -t name_of_image path_of_dockerfile
-#example
-# docker build -t serverweb .
-```
-
-To run:
-```Shell
-docker run -ti name_of_image
-#example
-# docker run -ti serverweb
-```
-
-To access into the running container:
-```Shell
-docker ps
-#copy the id_container of our container
-docker exec -ti id_container bash
-```
-
-To manage the DB on a running container, the admin had to use the command line:
-```Shell
-mysql -uadmin -p<PASSWORD> -h<HOST>
-#example
-#mysql -uadmin -pazerty -h172.17.0.2
-```
+1. Execute install_docker.sh.
+2. Put here the folder called WebApp containing the website or webapp.
+3. Inform into find_ip.sh the interface connected to the web.
+4. Execute setup_run_docker.sh
+5. If you want to connect into the running container, execute the file access_into_container.sh
 
 ## Future?
 
-In dockerfiles, echo in apache2.conf ServerTokens Prod
-Check open ports 111, 22 (Iptables)
-Create script to build image, to launch container, to access into container and to manage DB
-
-## Important
-
-Modify in open-bdd.php the login from 'root' to 'admin'
+<====== Nothing for the moment ======>
