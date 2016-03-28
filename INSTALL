@@ -1,0 +1,18 @@
+Les codes sources de l'application se trouve dans le dossier WebApp.
+Les autres fichiers/dossiers servent à mettre en place dynamiquement 
+l'architecture sécurisé (la machine physique tournée sous debian 8.0)
+
+Pour mettre en place notre architecture, il faut :
+
+1. Exécuter le fichier "install_docker.sh"
+
+2. Dans le fichier "find_ip.sh", vous devez renseigner le nom de l'interface
+connectée à internet (eth0, wlan0,...)
+
+3. Dans le dossier cert/, vous devez créer, à l'aide d'openssl, un certificat
+ainsi qu'une clé. Il faut impérativement les appeler "server.crt" et "server.key"
+
+4. Exécuter le script "setup_run_docker.sh"
+
+5. Une fois que le container est en fonctionnement, il est possible d'ouvrir
+un shell. Pour cela, il suffit juste d'exécuter "accesse_into_container.sh"

@@ -8,6 +8,9 @@ echo $PASSWORD > JavHackard/files/khdfgeaqejalh/bdd
 PASS=$(cat JavHackard/files/khdfgeaqejalh/bdd)
 echo "=> Creating MySQL admin user with $PASS password"
 
+### Find IP address of the interface
+./find_ip.sh
+
 ### Configuration of default apache2
 ./config_default_apache2.sh
 

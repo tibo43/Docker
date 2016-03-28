@@ -4,7 +4,7 @@
 ## change the interface in the variable
 
 ## write the interface
-INTERFACE='eth0'
+INTERFACE='wlan0'
 
 ## find IP adress
 ifconfig > conf_ip_tmp

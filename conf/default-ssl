@@ -20,9 +20,6 @@
 	<Directory /var/www/html/files>
                 Options None
 		AllowOverride None
-		<RequireAny>
-			Require ip 192.168.43.240
-		</RequireAny>
         </Directory>
 	
 
