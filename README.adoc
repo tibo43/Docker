@@ -5,3 +5,6 @@
 == WebApps
 
 == AsciiDoctor
+
+docker build -t asciidoctor-pdf .
+docker run -it -v /home/tfabre/Documents/Personal/Docker:/src -e DEFAULT_FILE=README.adoc -e DEFAULT_STYLE=linagora asciidoctor-pdf
