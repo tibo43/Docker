@@ -2,15 +2,17 @@ FROM tibo43/light-asciidoctor:latest
 MAINTAINER Thibaut Fabre <fabre.thibaut@gmail.com>
 
 ### Define some variables
+ENV DEFAULT_GEN default
 ENV DIR_PDF /theme/pdf-sources
-ENV DIR_FONTS fonts
-ENV DIR_THEME themes
+ENV DIR_PDF_FONTS fonts
+ENV DIR_PDF_THEME themes
+ENV DIR_REVEALJS /theme/reveal.js-sources
+ENV DIR_REVEALJS_SLIM slim
 ENV DEFAULT_STYLE default
 ENV DEFAULT_FILE default.adoc
 
 ### Git clone asciidoctor themes
 RUN mkdir /theme && mkdir /src
-#&& git clone https://github.com/tibo43/asciidoctor_theme.git /theme
 
 ### Set the place to mount the volume
 VOLUME /src

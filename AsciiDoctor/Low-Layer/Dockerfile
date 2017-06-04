@@ -11,7 +11,9 @@ RUN apk update && \
 RUN gem install rdoc && \
     gem install asciidoctor && \
     gem install asciidoctor-pdf --pre && \
-    gem install rouge pygments.rb coderay
+    gem install rouge pygments.rb coderay && \
+    gem install slim tilt haml && \
+    gem install asciidoctor-revealjs
 
 ### Set the CMD
 CMD ["/bin/bash"]
